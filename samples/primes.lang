@@ -1,0 +1,26 @@
+// Calculates prime numbers and "prime string"
+
+int a, b, maxNumber;
+string primeString;
+
+write "Enter maximal number";
+primeString = "";
+read maxNumber;
+
+bool isPrime;
+for (a = 1; a < maxNumber + 1; a = a + 1) {
+    isPrime = true;
+    for (b = 2; b < a; b = b + 1) {
+        if (a % b == 0) {
+            isPrime = false;
+        }
+    }
+    if (isPrime) {
+        write a, " is a prime number";
+        primeString = primeString . "p";
+    }
+    else {
+        primeString = primeString . "n";
+    }
+}
+write "Prime string: ", primeString;

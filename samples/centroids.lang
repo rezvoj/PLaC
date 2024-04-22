@@ -1,0 +1,22 @@
+// Calculates centroid of points
+
+float x, y, z;
+float iX, iY, iZ;
+int count;
+
+bool continue;
+for (continue = true; continue; count = count + 1) {
+    write "Enter x, y, z";
+    read iX, iY, iZ;
+    x = (count * x + iX) / (count + 1);
+    y = (count * y + iY) / (count + 1);
+    z = (count * z + iZ) / (count + 1);
+    write "continue? (yes/no)";
+    string yesNo;
+    read yesNo;
+    continue = yesNo == "yes";
+    continue = continue || yesNo == "Yes";
+    continue = continue || yesNo == "YES";
+    continue = continue || yesNo == "y";
+}
+write "Centroid: ", x, " ", y, " ", z;
